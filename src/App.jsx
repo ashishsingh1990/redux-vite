@@ -7,12 +7,20 @@ import Child from './components/Child'
 
 function App() {
   const dispatch = useDispatch();
-  const count = useSelector(state => state.count);
+  const name = useSelector(state => state.user.name);
 
-  const handleCount = () => {
+  // const handleCount = () => {
+  //   const action = {
+  //     type: 'ADD_COUNT_BY_ONE'
+  //   };
+  //   dispatch(action)
+  // }
+
+  const handleChangeName = () => {
     const action = {
-      type: 'ADD_COUNT_BY_ONE'
-    };
+      type: 'CHANGE_NAME',
+      payload: ''
+    }
     dispatch(action)
   }
   return (
@@ -27,8 +35,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => {handleCount()}}>
-          count is  {count}
+        <button onClick={() => {handleChangeName()}}>
+          Name is  {name}
         </button>
         <Child/>
         <p>
