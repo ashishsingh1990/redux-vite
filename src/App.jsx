@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { useDispatch, useSelector } from 'react-redux'
+import Child from './components/Child'
 
 function App() {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ function App() {
         <button onClick={() => {handleCount()}}>
           count is  {count}
         </button>
+        <Child/>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
